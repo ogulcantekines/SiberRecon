@@ -1,56 +1,62 @@
-# 🔍 SiberRecon
+# SiberRecon v1.6 📡🔎
 
-A lightweight Python security reconnaissance tool for auditing system information and critical network services.
+SiberRecon is a Python-based security reconnaissance tool designed to accelerate the process of network discovery and vulnerability analysis. Powered by multithreading, it scans targets in seconds and provides visual results.
 
-> ⚠️ **Disclaimer:** This tool is intended for educational purposes and authorized security auditing only. Do not use on systems you don't own or have explicit permission to test.
+## 🚀 Features
 
----
+- **Fast Scanning:** Parallel scanning of 18 critical ports (Threading) in seconds.
+- **Banner Grabbing:** Capable of capturing service information (versions, etc.) on open ports.
+- **Colorized Output:** Easy-to-read, color-coded status notifications on the terminal.
+- **Reporting:** Save scan results in JSON or TXT formats.
+- **System Metrics:** Collects detailed architecture and OS information about the target system.
 
-## ✨ Features
+## 🛠 Installation
 
-- 🖥️ **System Intelligence** — Gathers OS, architecture, hostname, and internal IP
-- 🔌 **Port Scanner** — TCP connect scan on critical service ports (SSH, HTTP, HTTPS, MySQL)
-- ⚡ **No dependencies** — Uses Python standard library only
+Python 3 must be installed on your computer to use this project.
 
-## 📋 Requirements
+1. **Clone the repository:**
 
-- Python 3.6+
+   ```bash
+   git clone https://github.com/ogulcantekines/SiberRecon.git
+   cd SiberRecon
+   ```
 
-## 🚀 Usage
+2. **Create a virtual environment (Recommended):**
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # Linux/macOS
+   # venv\Scripts\activate     # Windows
+   ```
+
+3. **Install the required packages:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 📋 Usage
+
+To perform a basic scan:
 
 ```bash
-git clone https://github.com/ogulcantekines/SiberRecon
-cd SiberRecon
-python main.py
+python3 main.py -t <TARGET_IP>
 ```
 
-### Example Output
+To save results to a file:
 
-```text
-==================== SiberRecon v1.0: Security Audit ====================
-
-[+] Gathering System Intelligence...
-    - Os Name: Linux
-    - Os Release: 6.x.x
-    - Architecture: x86_64
-    - Hostname: mymachine
-    - Internal Ip: 192.168.1.100
-
-[+] Auditing Critical Network Services...
-    - Port 22 (SSH): PASSED (Open)
-    - Port 80 (HTTP): FAILED (Closed/Filtered)
-    - Port 443 (HTTPS): FAILED (Closed/Filtered)
-    - Port 3306 (MySQL): FAILED (Closed/Filtered)
+```bash
+python3 main.py -t 127.0.0.1 -o report.txt
 ```
 
-## 🛣️ Roadmap
+To view the help menu:
 
-- [ ] CLI arguments (`-t` target, `-p` ports, `-o` output file)
-- [ ] Parallel scanning with threading
-- [ ] Colored terminal output
-- [ ] Banner grabbing (service version detection)
-- [ ] JSON/TXT report export
+```bash
+python3 main.py --help
+```
 
-## 📄 License
+## ⚠️ Legal Disclaimer
 
-MIT License — see [LICENSE](LICENSE) for details.
+This tool is for legal penetration testing and educational purposes only. Usage on unauthorized systems is entirely the responsibility of the user.
+
+**Developed by:** [ogulcantekines](https://github.com/ogulcantekines)
