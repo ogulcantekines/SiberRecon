@@ -1,8 +1,8 @@
-# SiberRecon v1.6 📡🔎
+# SiberRecon v1.6
 
 SiberRecon is a Python-based security reconnaissance tool designed to accelerate the process of network discovery and vulnerability analysis. Powered by multithreading, it scans targets in seconds and provides visual results.
 
-## 🚀 Features
+## Features
 
 - **Fast Scanning:** Parallel scanning of 18 critical ports (Threading) in seconds.
 - **Banner Grabbing:** Capable of capturing service information (versions, etc.) on open ports.
@@ -10,7 +10,7 @@ SiberRecon is a Python-based security reconnaissance tool designed to accelerate
 - **Reporting:** Save scan results in JSON or TXT formats.
 - **System Metrics:** Collects detailed architecture and OS information about the target system.
 
-## 🛠 Installation
+## Installation
 
 Python 3 must be installed on your computer to use this project.
 
@@ -35,7 +35,7 @@ Python 3 must be installed on your computer to use this project.
    pip install -r requirements.txt
    ```
 
-## 📋 Usage
+## Usage
 
 To perform a basic scan:
 
@@ -55,7 +55,7 @@ To view the help menu:
 python3 main.py --help
 ```
 
-## ⚠️ Legal Disclaimer
+## Legal Disclaimer
 
 This tool is for legal penetration testing and educational purposes only. Usage on unauthorized systems is entirely the responsibility of the user.
 
